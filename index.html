@@ -1,0 +1,95 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Data Dialogues</title>
+    <meta name="description" content="Conversations with Scottish citizens on the future of healthcare data">
+    <meta name="author" content="Eva Oosterlaken & Finn Strivens">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="MyFontsWebfontsKit.css">
+    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body class="showframework" data-filter="">
+    <div id="backgroundcontainer">
+      <img src="images/background.jpg">
+    </div>
+    <header>
+      <h1>Data dialogues</h1>
+      <p>Nesta and the Scottish Government have recently concluded an 18-month dialogue with Scottish citizens.</p>
+      <p>We wanted to better understand their opinions and ideas about the sharing of health and care data.</p>
+      <p>This website presents our findings.</p>
+      <button type="button" id="buttonenter">Enter site</button>
+    </header>
+    <section>
+      <p>After hearing many different perspectives, we identified 7 distinct relationships that Scottish people have with data.</p>
+      <p>This website presents these relationships through a series of conversations with future Scottish citizens.</p>
+      <p>Each fictional dialogue illustrates people’s hopes and fears for the future.</p>
+      <button type="button" id="buttonexplore">Explore dialogues</button>
+    </section>
+    <nav>
+      <div id="navheader">
+        <h2>Data dialogues</h2>
+        <p>We found 7 relationships that Scottish people have with their health and care data.<span id="frameworkexplanation"> Here they are arranged by people’s willingness to share and whether they are driven by personal or societal concerns.</span></p>
+        <p>Click on a relationship to experience people’s hopes and fears for the future.</p>
+        <p id="filterexplaination">The size of the bubble shows how much the selected group aligned with that relationship.</p>
+      </div>
+      <ul id="map">
+        <a href="sharingiscaring/" data-background="b9efe2"><li id="bubblesharingiscaring">Sharing is caring</li></a>
+        <a href="isthereanappforthat/" data-background="002d54"><li id="bubbleisthereanappforthat">Is there an app for that?</li></a>
+        <a href="onmyterms/" data-background="143e77"><li id="bubbleonmyterms">On my terms</li></a>
+        <a href="seethewholeme/" data-background="f089ca"><li id="bubbleseethewholeme">See the whole me</li></a>
+        <a href="givemefairaccess/" data-background="ffff7f"><li id="bubblegivemefairaccess">Give me fair access</li></a>
+        <a href="takemebythehand/" data-background="682c44"><li id="bubbletakemebythehand">Take me by the hand</li></a>
+        <a href="winbackmytrust/" data-background="002d54"><li id="bubblewinbackmytrust">Win back my trust</li></a>
+      </ul>
+      <img id="framework" src="images/framework.svg">
+    </nav>
+    <div id="buttons">
+      <button type="button" class="toggle" id="buttonreplayintro">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M1.643 3.143L.427 1.927A.25.25 0 000 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 00.177-.427L2.715 4.215a6.5 6.5 0 11-1.18 4.458.75.75 0 10-1.493.154 8.001 8.001 0 101.6-5.684z"></path></svg>
+        Replay the intro
+      </button>
+      <a class="button toggle" id="buttondownload" download="Data Dialogues Summary Report.pdf" href="downloads/data-dialogues-summary-report.pdf">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M7.47 10.78a.75.75 0 001.06 0l3.75-3.75a.75.75 0 00-1.06-1.06L8.75 8.44V1.75a.75.75 0 00-1.5 0v6.69L4.78 5.97a.75.75 0 00-1.06 1.06l3.75 3.75zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"></path></svg>
+        Download the report
+      </a>
+      <button type="button" class="toggle" id="buttontoggleframework">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M5.25 1a.75.75 0 01.75.75v2.5A1.75 1.75 0 014.25 6h-2.5a.75.75 0 010-1.5h2.5a.25.25 0 00.25-.25v-2.5A.75.75 0 015.25 1zm5.5 0a.75.75 0 01.75.75v2.5c0 .138.112.25.25.25h2.5a.75.75 0 010 1.5h-2.5A1.75 1.75 0 0110 4.25v-2.5a.75.75 0 01.75-.75zM1 10.75a.75.75 0 01.75-.75h2.5c.966 0 1.75.784 1.75 1.75v2.5a.75.75 0 01-1.5 0v-2.5a.25.25 0 00-.25-.25h-2.5a.75.75 0 01-.75-.75zm9 1c0-.966.784-1.75 1.75-1.75h2.5a.75.75 0 010 1.5h-2.5a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5z"></path></svg>
+        Toggle framework
+      </button>
+      <div class="button toggle" id="buttonfilter">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M.75 3a.75.75 0 000 1.5h14.5a.75.75 0 000-1.5H.75zM3 7.75A.75.75 0 013.75 7h8.5a.75.75 0 010 1.5h-8.5A.75.75 0 013 7.75zm3 4a.75.75 0 01.75-.75h2.5a.75.75 0 010 1.5h-2.5a.75.75 0 01-.75-.75z"></path></svg>
+        <select>
+          <option selected value="">
+            Filter by group
+          </option>
+          <option value="youngpeople">Young people</option>
+          <option value="olderpeople">Older people</option>
+          <option value="peoplewithdisabilities">People with disabilities</option>
+          <option value="peoplewithcareneeds">People with care needs</option>
+          <option value="peoplewithamedicalcondition">People with a medical condition</option>
+          <option value="lgbtqgroups">LGBTQ+ groups</option>
+          <option value="minoritygroups">Minority groups</option>
+          <option value="generalpublic">General public</option>
+        </select>
+      </div>
+      <button type="button" class="toggle" id="buttontogglesound">
+        <svg id="soundon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M7.563 2.069A.75.75 0 018 2.75v10.5a.75.75 0 01-1.238.57L3.472 11H1.75A1.75 1.75 0 010 9.25v-2.5C0 5.784.784 5 1.75 5h1.723l3.289-2.82a.75.75 0 01.801-.111zM6.5 4.38L4.238 6.319a.75.75 0 01-.488.181h-2a.25.25 0 00-.25.25v2.5c0 .138.112.25.25.25h2a.75.75 0 01.488.18L6.5 11.62V4.38zm6.096-2.038a.75.75 0 011.06 0 8 8 0 010 11.314.75.75 0 01-1.06-1.06 6.5 6.5 0 000-9.193.75.75 0 010-1.06v-.001zm-1.06 2.121a.75.75 0 10-1.061 1.061 3.5 3.5 0 010 4.95.75.75 0 101.06 1.06 5 5 0 000-7.07l.001-.001z"></path></svg>
+        <svg id="soundoff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M8 2.75a.75.75 0 00-1.238-.57L3.472 5H1.75A1.75 1.75 0 000 6.75v2.5C0 10.216.784 11 1.75 11h1.723l3.289 2.82A.75.75 0 008 13.25V2.75zM4.238 6.32L6.5 4.38v7.24L4.238 9.68a.75.75 0 00-.488-.18h-2a.25.25 0 01-.25-.25v-2.5a.25.25 0 01.25-.25h2a.75.75 0 00.488-.18zm7.042-1.1a.75.75 0 10-1.06 1.06L11.94 8l-1.72 1.72a.75.75 0 101.06 1.06L13 9.06l1.72 1.72a.75.75 0 101.06-1.06L14.06 8l1.72-1.72a.75.75 0 00-1.06-1.06L13 6.94l-1.72-1.72z"></path></svg>
+        Toggle sound
+      </button>
+    </div>
+    <div id="shade"></div>
+    <script src="index.js"></script>
+    <audio id="loop" src="audio/index.mp3" hidden loop></audio>
+  </body>
+
+</html>

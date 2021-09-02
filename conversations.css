@@ -1,0 +1,313 @@
+body {
+  background: var(--background-color);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#backgroundcontainer img:first-child {
+  transform: translate3d(0, 0, 1px);
+}
+
+#backgroundcontainer img:nth-child(2) {
+  transform: translate3d(0, 0, 2px);
+}
+
+#backgroundcontainer img:nth-child(3) {
+  transform: translate3d(-1%, -1%, 3px) scale(0.97);
+}
+
+#backgroundcontainer img:nth-child(4) {
+  transform: translate3d(-1.3%, -1.3%, 4px) scale(0.96);
+}
+
+#backgroundcontainer img:nth-child(5) {
+  transform: translate3d(-1.6%, -1.6%, 5px) scale(0.95);
+}
+
+#backgroundcontainer img:nth-child(6) {
+  transform: translate3d(-1.9%, -1.9%, 5px) scale(0.94);
+}
+
+
+#conversation {
+  min-height: 100%;
+}
+
+#messages {
+  box-sizing: border-box;
+  width: 60vw;
+  max-width: 1000px;
+  margin: 0 0 0 auto;
+  padding: 250px max(30px, 9vw) min(250px, 20vw);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+#messages li {
+  font-family: "Averta-RegularItalic";
+  font-size: 24px;
+  line-height: 1.4;
+  margin: 28px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  color: var(--conversation-color);
+  transition: all 2s ease;
+  white-space: pre-wrap;
+}
+
+#messages li.intro {
+  margin-right: 40%;
+  animation: fadein 0.4s ease-in;
+
+  font-family: "Averta-Regular";
+}
+
+#messages li.received {
+  margin-right: 40%;
+  animation: fadeindown 0.4s ease-in;
+}
+
+#messages li.sent {
+  margin-left: 40%;
+  animation: fadeinup 0.4s ease-in;
+}
+
+#messages li.intro.fade,
+#messages li.received.fade {
+  opacity: 0.5;
+}
+
+#messages li.sent.fade {
+  opacity: 0.5;
+}
+
+#messages li.choice {
+  margin: 0;
+  animation: fadein 0.4s ease-in;
+  width: auto;
+  transition: all 0.4s;
+}
+
+#messages li.choice.hide {
+  animation: choicesend 1s forwards;
+  pointer-events: none;
+}
+
+#messages li.choice.quickhide {
+  animation: fadeout 0.3s forwards;
+  pointer-events: none;
+}
+
+#messages li button {
+  background: var(--button-color);
+  color: var(--text-color);
+  margin: 20px 10px 9px;
+}
+
+body.inprogress article,
+body.inprogress footer {
+  display: none;
+}
+
+article > header,
+article > section,
+footer {
+  padding: 50px;
+}
+
+article > header > *,
+article > section > *,
+article > nav > *,
+footer > * {
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article > header p {
+  color: var(--conversation-color);
+  font-family: "Averta-Bold";
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin: 0 auto;
+}
+
+article > header h1 {
+  color: var(--conversation-color);
+  margin-bottom: 0;
+}
+
+article > section,
+footer {
+  background: white;
+}
+
+article > section h2 {
+  margin-top: 50px;
+}
+
+article > section li p {
+  background: var(--button-color);
+  color: var(--text-color);
+  border-radius: 30px;
+  padding: 30px;
+  margin-left: -30px;
+  margin-right: -30px;
+  opacity: 0;
+}
+
+article > section li:nth-child(odd) p {
+  border-bottom-right-radius: 0;
+}
+
+article > section li:nth-child(even) p {
+  border-bottom-left-radius: 0;
+}
+
+article > section li p.visible {
+  animation: fadeinup 1s ease-in forwards;
+}
+
+article > nav {
+  background: #E8EBF0;
+  overflow: hidden;
+  padding: 30px 0;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 30px 0;
+  padding-left: 30%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+nav ul a {
+  text-decoration: none;
+}
+
+nav ul a:hover,
+nav ul a:focus {
+  text-decoration: underline;
+  text-decoration-color: #0f294a;
+}
+
+nav a.button {
+  width: auto;
+}
+
+.imagecontainer {
+  position: absolute;
+  width: 25%;
+  top: -5px;
+  left: 2%;
+  bottom: -5px;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+  transition: all 0.5s ease;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+footer ul li {
+  padding: 0 10.5px;
+}
+
+footer a,
+footer p {
+  color: black;
+  font-family: "Averta-Regular";
+  font-size: 16px;
+  line-height: 1.85;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #e61f47;
+  fill: #e61f47;
+}
+
+footer a svg {
+  margin-top: 5px;
+}
+
+body:not(.canskip) #buttonskipconversation {
+  display: none;
+}
+
+body:not(.inprogress) #buttons {
+  animation: fadeout 0.3s forwards;
+  pointer-events: none;
+}
+
+#shade {
+  transition: opacity 0.3s ease;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  #backgroundcontainer img:not(:first-child) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #backgroundcontainer img:not(:first-child) {
+    display: none;
+  }
+
+  #messages {
+    width: 100vw;
+  }
+
+  #buttons {
+    flex-direction: column-reverse;
+    top: 30px;
+    bottom: auto;
+  }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  #backgroundcontainer {
+    perspective: 100px;
+  }
+
+  #messages li.choice:hover {
+    transform: translateY(-2%) scale(1.1);
+  }
+  
+  #messages li.intro.fade,
+  #messages li.received.fade {
+    opacity: 0.8;
+    transform: scale(0.9) translate(6%);
+    filter: blur(1px);
+  }
+
+  #messages li.sent.fade {
+    opacity: 0.8;
+    transform: scale(0.9) translate(-6%);
+    filter: blur(1px);
+  }
+
+  a:hover .imagecontainer,
+  a:focus .imagecontainer {
+    transform: scale(1.1);
+  }
+}

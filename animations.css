@@ -1,0 +1,122 @@
+@keyframes nopointerevents {
+  from {
+    pointer-events: none;
+  }
+
+  to {
+    pointer-events: none;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0; 
+  }
+}
+
+@keyframes fadeoutup {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+}
+
+@keyframes fadeindown {
+  from {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinup {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: none;
+  }
+}
+
+@keyframes choicesend {
+  from {
+    opacity: 1;
+    transform: translateY(-2%) scale(1.1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-20%) scale(1.2);
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  @keyframes fadeoutup {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeindown {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeinup {
+    from {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    to {
+      opacity: 1;
+      pointer-events: none;
+    }
+  }
+
+  @keyframes choicesend {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+}

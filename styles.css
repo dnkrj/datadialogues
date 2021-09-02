@@ -1,0 +1,336 @@
+body, ol, ul, li, h1, h2, h3, h4, p {
+  padding: 0;
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+h1 {
+  color: #0f294a;
+  font-family: "Averta-Regular";
+  font-size: 48px;
+  line-height: 1.4;
+  margin-bottom: 28px;
+}
+
+h2 {
+  color: #0f294a;
+  font-family: "Averta-Bold";
+  font-size: 27px;
+  line-height: 1.4;
+  margin-bottom: 28px;
+}
+
+h3 {
+  color: #0f294a;
+  font-family: "Averta-Bold";
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+p {
+  color: black;
+  font-family: "Averta-Regular";
+  font-size: 18px;
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+
+p em {
+  font-family: "Averta-RegularItalic";
+  color: #0f294a;
+  font-style: normal;
+}
+
+a {
+  cursor: pointer;
+}
+
+button,
+.button {
+  background: #6666ff;
+  color: white;
+  font-family: "Averta-Regular";
+  font-size: 18px;
+  line-height: 30px;
+  border: none;
+  padding: 15px 30px;
+  margin: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 60px;
+  transition: background 0.4s ease;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  outline: none;
+  background: #0f294a;
+  cursor: pointer;
+}
+
+button.toggle,
+.button.toggle {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0);
+}
+
+button.toggle svg,
+.button.toggle svg {
+  height: 24px;
+  width: 24px;
+  fill: white;
+  margin-left: -12px;
+  margin-bottom: -6px;
+  margin-right: 6px;
+}
+
+button.toggle:hover,
+button.toggle:focus,
+.button.toggle:hover,
+.button.toggle:focus,
+body:not([data-filter=""]) #buttonfilter {
+  color: white;
+  width: auto;
+}
+
+#buttontogglesound:hover,
+#buttontogglesound:focus {
+  width: 189px;
+}
+
+body.noaudiocontrol #buttontogglesound {
+  display: none;
+}
+
+#buttontogglesound #soundon,
+#buttontogglesound.muted #soundoff {
+  display: none;
+}
+
+#buttontogglesound.muted #soundon,
+#buttontogglesound #soundoff {
+  display: inline-block;
+}
+
+body[data-filter=""] #buttonfilter:hover,
+body[data-filter=""] #buttonfilter:focus {
+  width: 138px;
+}
+
+body:not([data-filter=""]) #buttonfilter {
+  width: 281px;
+}
+
+#buttonreplayintro:hover,
+#buttonreplayintro:focus {
+  width: 212px;
+}
+
+#buttonback:hover,
+#buttonback:focus {
+  width: 187px;
+}
+
+#buttondownload:hover,
+#buttondownload:focus {
+  width: 195px;
+}
+
+#buttontoggleframework:hover,
+#buttontoggleframework:focus {
+  width: 226px;
+}
+
+#buttonskipconversation:hover,
+#buttonskipconversation:focus {
+  width: 229px;
+}
+
+select {
+  background: transparent;
+  color: currentcolor;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  font: inherit;
+  margin: 0;
+  cursor: pointer;
+}
+
+#backgroundcontainer {
+  z-index: -1;
+}
+
+#backgroundcontainer,
+#backgroundcontainer img {
+  position: fixed;
+  top: 0;
+
+  height: 100vh;
+  width: 100vw;
+
+  object-fit: cover;
+  animation: fadein 2s backwards;
+}
+
+#bubbleisthereanappforthat {
+  mask-image: url("images/bubbleisthereanappforthat.svg");
+  -webkit-mask-image: url("images/bubbleisthereanappforthat.svg");
+  background: var(--isthereanappforthat-color);
+  background-image: url("images/gradientisthereanappforthat.jpg");
+  background-size: cover;
+}
+
+a:hover > #bubbleisthereanappforthat,
+a:focus > #bubbleisthereanappforthat,
+#bubbleisthereanappforthat:hover {
+  background-image: url("images/windowisthereanappforthat.jpg");
+}
+
+#bubbletakemebythehand {
+  mask-image: url("images/bubbletakemebythehand.svg");
+  -webkit-mask-image: url("images/bubbletakemebythehand.svg");
+  background: var(--takemebythehand-color);
+  background-image: url("images/gradienttakemebythehand.jpg");
+  background-size: cover;
+}
+
+a:hover > #bubbletakemebythehand,
+a:focus > #bubbletakemebythehand,
+#bubbletakemebythehand:hover {
+  background-image: url("images/windowtakemebythehand.jpg");
+}
+
+#bubblesharingiscaring {
+  mask-image: url("images/bubblesharingiscaring.svg");
+  -webkit-mask-image: url("images/bubblesharingiscaring.svg");
+  background: var(--sharingiscaring-color);
+  background-image: url("images/gradientsharingiscaring.jpg");
+  background-size: cover;
+}
+
+a:hover > #bubblesharingiscaring,
+a:focus > #bubblesharingiscaring,
+#bubblesharingiscaring:hover {
+  background-image: url("images/windowsharingiscaring.jpg");
+}
+
+
+#bubbleonmyterms {
+  mask-image: url("images/bubbleonmyterms.svg");
+  -webkit-mask-image: url("images/bubbleonmyterms.svg");
+  background: var(--onmyterms-color);
+  background-image: url("images/gradientonmyterms.jpg");
+  background-size: cover;
+}
+
+a:hover > #bubbleonmyterms,
+a:focus > #bubbleonmyterms,
+#bubbleonmyterms:hover {
+  background-image: url("images/windowonmyterms.jpg");
+}
+
+#bubbleseethewholeme {
+  mask-image: url("images/bubbleseethewholeme.svg");
+  -webkit-mask-image: url("images/bubbleseethewholeme.svg");
+  background: var(--seethewholeme-color);
+  background-image: url("images/gradientseethewholeme.jpg");
+  background-size: cover;
+}
+
+a:hover > #bubbleseethewholeme,
+a:focus > #bubbleseethewholeme,
+#bubbleseethewholeme:hover {
+  background-image: url("images/windowseethewholeme.jpg");
+}
+
+#bubblegivemefairaccess {
+  mask-image: url("images/bubblegivemefairaccess.svg");
+  -webkit-mask-image: url("images/bubblegivemefairaccess.svg");
+  background: var(--givemefairaccess-color);
+  background-image: url("images/gradientgivemefairaccess.jpg");
+  background-size: cover;
+}
+
+a:hover > #bubblegivemefairaccess,
+a:focus > #bubblegivemefairaccess,
+#bubblegivemefairaccess:hover {
+  background-image: url("images/windowgivemefairaccess.jpg");
+}
+
+#bubblewinbackmytrust {
+  mask-image: url("images/bubblewinbackmytrust.svg");
+  -webkit-mask-image: url("images/bubblewinbackmytrust.svg");
+  background: var(--winbackmytrust-color);
+  background-image: url("images/gradientwinbackmytrust.jpg");
+  background-size: cover;
+}
+
+a:hover > #bubblewinbackmytrust,
+a:focus > #bubblewinbackmytrust,
+#bubblewinbackmytrust:hover {
+  background-image: url("images/windowwinbackmytrust.jpg");
+}
+
+#buttons {
+  display: flex;
+  z-index: 2;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  overflow: hidden;
+}
+
+#buttons button,
+#buttons .button {
+  margin: 10px;
+}
+
+#shade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  pointer-events: none;
+
+  transition: opacity 2s ease;
+  opacity: 0;
+
+  background-image: url("images/background.jpg");
+  background-size: cover;
+}
+
+@media only screen and (max-width: 1000px) {
+  #buttons {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  button,
+  .button {
+    transition: all 0.4s ease;
+  }
+
+  button:hover,
+  button:focus,
+  .button:hover,
+  .button:focus {
+    outline: none;
+    transform: scale(1.05);
+  }
+}
